@@ -1,0 +1,23 @@
+{
+    "name": "microservice-api",
+    "version": "1.0.0",
+    "description": "Microservice API",
+    "main": "index.js",
+    "scripts": {
+        "service-customers": "npm --prefix service-customers/ start",
+        "service-products": "npm --prefix service-products/ start",
+        "service-tickets": "npm --prefix service-tickets/ start",
+        "service-sales": "npm --prefix service-sales/ start",
+        "gateway-api": "npm --prefix gateway-api/ start",
+        "dev": "concurrently --kill-others \"npm run gateway-api\" \"npm run service-customers\" \"npm run service-products\" \"npm run service-tickets\" \"npm run service-sales\"",
+        "start": "npm run dev"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+
+    },
+    "dependencies": {
+
+    }
+}
